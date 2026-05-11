@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ADF Monitor</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0B1120">
+  
+  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/irwantoscm-star/logo_mobile_apk/main/wims-connect.png">
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: #0B1120; /* Sesuai dengan warna tema Navy kita */
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  
+  <iframe src="https://script.google.com/macros/s/AKfycbwb-f_IageU1hHgKyCjJnvp8h9g91yNoC9T-mE-fRH8_amKF-BwDAPF97apg-Cf-F-UGg/exec" allowfullscreen></iframe>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
+</body>
+</html>
